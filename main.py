@@ -31,6 +31,7 @@ def handle_message(message):
         print("!!!!!!!!!!!!!!!")
         print(chat_id)
         DBWorking.create_table(chat_id, user_id)
+        chats.append(chat_id)
 
     if user_id not in DBWorking.get_users(chat_id):
         DBWorking.new_user(chat_id, user_id)

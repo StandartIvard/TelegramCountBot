@@ -16,7 +16,7 @@ def create_table(name, user):
                                         messages INTEGER
                     );""")
     con.commit()
-    cur.execute(f'INSERT INTO "{name}"(id, messages) VALUES("{user}", 1)')
+    cur.execute(f'INSERT INTO "{name}"(id, messages) VALUES("{user}", 0)')
     con.commit()
 
 
